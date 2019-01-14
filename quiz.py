@@ -1,4 +1,5 @@
-
+global score
+score = int(0)
 def askquestion(check, uanswer, correctanswer):
     while check == 0:
         try:
@@ -6,6 +7,8 @@ def askquestion(check, uanswer, correctanswer):
             #check if answer correct
             if uanswer == correctanswer:
                 check += 1
+                global score
+                score += 1
             #check if answer is acceatpable
             elif 0 < uanswer < 5:
                 check -= 1
@@ -37,4 +40,6 @@ print("2) Britain")
 print("3) Roman Empire")
 print("4) Holy roman empire")
 
-askquestion(0,1,3)
+askquestion(0,2,3)
+
+print(score*50, "%")
