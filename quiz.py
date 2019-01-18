@@ -96,5 +96,12 @@ askquestion(0,10,4)
 
 
 
-print(score*10, "%")
+print("you got",score*10, "%")
+if score == 10:
+    print("perfect score")
+elif score > 6:
+    print("good job")
+else:
+    print("You didn't do so well")
+
 
